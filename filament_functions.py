@@ -1,16 +1,33 @@
 from myPackages import *
 
+#########################################################################
+################## Cosmological/Physical Parameters #####################
+#########################################################################
+
 c0 = 3e5
 H_0 = 70
 Omega_l = 0.7
 Omega_m = 0.3
 
+z_min = 0.4
+z_max = 6
+
+lim_deltaz = 2
+Ks_cut = 24.5
+
+cosmo = FlatLambdaCDM(H0 = H_0, Om0 = Omega_m)
+
+#########################################################################
+############################# Functions #################################
+#########################################################################
+
 def setup(work_path='.'):
     '''
     Set up all of the necessary directories
     '''
-    for subdir in ('inputs', 'outputs', 'bin',  
-                   'outputs/plots', 'outputs/eigenvalues', 'outputs/signals'
+    for subdir in ('inputs', 'outputs', 'bin',
+                   'inputs/pre', 'outputs/eigenvalues', 
+                   'outputs/plots',  'outputs/signals'
                    ):
         path = os.path.join(work_path, subdir)
         if not os.path.exists(path):

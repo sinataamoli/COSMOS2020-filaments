@@ -2,6 +2,7 @@ import numpy as np
 import scipy as sp
 import pandas as pd
 import math
+import glob
 
 from scipy.stats import norm
 from scipy.stats import binned_statistic
@@ -33,7 +34,7 @@ title = {'color':  'black', 'weight': 'normal',
 label = {'color':  'black', 'weight': 'normal',
          'size': 23}
 
-import matplotlib.animation as animation
+# import matplotlib.animation as animation
 # # matplotlib.rcParams.update(matplotlib.rcParamsDefault)
 plt.rcParams["font.family"] = "serif"
 plt.rcParams["font.serif"] = ["Times New Roman"]
@@ -53,7 +54,3 @@ import time
 
 # import seaborn as sns
 import concurrent.futures
-
-
-
-print('all packages are now imported!')
